@@ -81,7 +81,7 @@ public class Payment {
 		 } 
 		 
 		 // Prepare the html table to be displayed
-		 output = "<table border='1' class='table'><thead class='thead-dark'><th>Customer Name</th><th>Bill ID</th><th>Card No</th><th>CVV</th><th>Expired Date</th><th>Paid Amount</th><th>Paid Date and Time</th><th>Update</th><th>Remove</th></thead>"; 
+		 output = "<table class='table table-bordered' cellpadding='0' cellspacing='0' width='100%'><thead class='thead-dark'><tr><th>Customer Name</th><th>Bill ID</th><th>Card No</th><th>CVV</th><th>Expired Date</th><th>Paid Amount</th><th>Paid Date</th><th>Update</th><th>Remove</th></tr></thead>"; 
 		 String query = "select * from payment"; 
 		 Statement stmt = con.createStatement(); 
 		 ResultSet rs = stmt.executeQuery(query);

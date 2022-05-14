@@ -5,18 +5,24 @@
 	<html>
 		<head>
 		<meta charset="ISO-8859-1">
-		<title>Payments Management</title>
+		<title>Payment Management</title>
 		<link rel="stylesheet" href="Views/bootstrap.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<script src="Components/jquery.min.js"></script>
 		<script src="Components/payments.js"></script>
 		</head>
 	<body>
-	<br></br>
-	<div>
-		<h1>&nbsp;&nbsp;&nbsp;Payments Management</h1><br></br>
+	 <nav class="navbar navbar-dark bg-primary">
+            <h3 style="color: white">ElectroGrid</h3>
+     </nav>
+      
+	
+	<div class="container">
+	<div align="center">
+		<h1>Payment Management</h1><br></br>
 	</div>
-	<div class="container"><div class="row">
-	<div class="col-3"> 
+	<div class="row">
+	<div class="col-sm-4"> 
 		
 			<form id="formPayment" name="formPayment">
 				 Customer Name: 
@@ -49,7 +55,7 @@
 		
 		<br>
 		</div>
-		<div id="divPaymentGrid" class="col-9">
+		<div id="divPaymentGrid" class="col-sm-8">
 			 <%
 			 Payment paymentObj = new Payment(); 
 			 out.print(paymentObj.readPayments()); 
