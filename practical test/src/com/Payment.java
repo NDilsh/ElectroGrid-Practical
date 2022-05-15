@@ -81,7 +81,7 @@ public class Payment {
 		 } 
 		 
 		 // Prepare the html table to be displayed
-		 output = "<table class='table table-bordered' cellpadding='0' cellspacing='0' width='100%'><thead class='thead-dark'><tr><th>Customer Name</th><th>Bill ID</th><th>Card No</th><th>CVV</th><th>Expired Date</th><th>Paid Amount</th><th>Paid Date</th><th>Update</th><th>Remove</th></tr></thead>"; 
+		 output = "<table id='paytable' class='table table-bordered table-hover' cellpadding='0' cellspacing='0' width='100%'><thead class='thead-dark'><tr><th>Customer Name</th><th>Bill ID</th><th>Card No</th><th>CVV</th><th>Expired Date</th><th>Paid Amount(Rs.)</th><th>Paid Date & Time</th><th>Update</th><th>Remove</th></tr></thead>"; 
 		 String query = "select * from payment"; 
 		 Statement stmt = con.createStatement(); 
 		 ResultSet rs = stmt.executeQuery(query);
@@ -99,7 +99,7 @@ public class Payment {
 		 String payDate =rs.getString("payDate");
 		 
 		 // Add a row into the html table 
-		 output += "<tr><td>" + customerName + "</td>";
+		 output += "<tbody><tr><td>" + customerName + "</td>";
 		 output += "<td>" + billId + "</td>";
 		 output += "<td>" + cardNo + "</td>";
 		 output += "<td>" + cvv + "</td>";
@@ -108,8 +108,8 @@ public class Payment {
 		 output += "<td>" + payDate + "</td>";
 		 
 		 // buttons
-		 output += "<td><input name='btnUpdate' type='button' value='Update' class='btnUpdate btn btn-warning' data-paymentid='" + pID +"'></td>"
-				 + "<td><input name='btnRemove' type='button' value='Remove' class='btnRemove btn btn-danger' data-paymentid='" + pID +"'></td></tr>"; 
+		 output += "<td><input name='btnUpdate' type='button' value='Update' class='btnUpdate btn btn-success' data-paymentid='" + pID +"'></td>"
+				 + "<td><input name='btnRemove' type='button' value='Remove' class='btnRemove btn btn-danger' data-paymentid='" + pID +"'></td></tr></tbody>"; 
 		 } 
 		 con.close(); 
 		 
