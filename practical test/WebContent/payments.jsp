@@ -5,7 +5,7 @@
 	<html>
 		<head>
 		<meta charset="ISO-8859-1">
-		<title>Payment Management</title>
+		<title>Payment Service</title>
 		<link rel="stylesheet" href="Views/bootstrap.min.css">
 		<script src="Components/jquery.min.js"></script>
 		<script src="Components/payments.js"></script>
@@ -56,6 +56,7 @@
 		
 		<br>
 		</div>
+		
 		<div id="divPaymentGrid" class="col-8" style="text-align: center">
 		<br>
 			 <%
